@@ -1,0 +1,88 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+header{
+   background-color: #3A36BF;
+   color: #fafafa;
+   padding: 16px 0; /*16px para cima e para baixo e 0px para os lados*/
+   display: flex; /*Para deixar os elementos flexíveis: deixando o botão (nova imagem) ao lado do título. */
+   border-bottom: 16px solid #020659;
+   justify-content: center; /*Vai deixar todos os elementos do header centralizados*/
+}
+
+header button{
+   margin-left: 16px; /*Para ter uma separação entre o botão e o título.*/
+   background-color: #F29C50;
+   color: #131313;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   font-weight: bold;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+form{
+   background-color: #E9DFF2;
+   padding: 24px 0;
+   text-align: center; /*Para centralizar todos os elementos*/
+   display: none;
+}
+
+form h2{
+   margin-bottom: 16px;
+}
+
+form button, input{
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+}
+
+form button{
+   text-transform: uppercase;
+   cursor: pointer;
+   font-weight: bold;
+   background-color: #ffffff;
+}
+
+ul{
+   display: flex;
+   flex-wrap: wrap; /*É usado para quando chegar no limite da tela, se cria uma nova linha*/
+}
+
+ul li{
+   max-width: 25%;
+   list-style: none; /*Para remover as "bolinhas"*/
+   position: relative;
+   max-height: 280px;
+   overflow-y: hidden; /*Para ocultar qualquer coisa que ultrapasse a altura permitida*/
+}
+
+ul li img{
+   width: 100%; /*Para a image ser obrigada a ocupar todo o local determinado*/
+}
+
+.overlayImagemLink{
+   padding: 16px;
+   background-color: #1313132c;
+   position: absolute; /*Para posicionar o elemento no canto inferior do LI*/
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   opacity: 0;
+}
+
+.overlayImagemLink a{
+   color: #fafafa;
+   text-decoration: none;
+}
+
+ul li:hover .overlayImagemLink{
+   opacity: 1;
+   transition: 0.5s;
+}
